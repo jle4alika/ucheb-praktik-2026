@@ -25,7 +25,7 @@
 ## Структура проекта
 
 ```
-src/main/java/folderindexer/
+src/
   Main.java      — меню и логика программы
   Database.java  — работа с SQLite
 ```

@@ -9,8 +9,6 @@ if [[ ! -f lib/sqlite-jdbc.jar ]]; then
 fi
 
 mkdir -p out
-find src/main/java -name "*.java" > sources.txt
-javac -encoding UTF-8 -d out -cp lib/sqlite-jdbc.jar @sources.txt
-rm -f sources.txt
+javac -encoding UTF-8 -d out -cp lib/sqlite-jdbc.jar src/*.java
 
-exec java --enable-native-access=ALL-UNNAMED -cp "out:lib/sqlite-jdbc.jar" folderindexer.Main "$@"
+exec java --enable-native-access=ALL-UNNAMED -cp "out:lib/sqlite-jdbc.jar" Main "$@"
